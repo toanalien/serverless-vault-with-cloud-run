@@ -6,7 +6,7 @@ gcloud alpha run deploy vault-server \
   --allow-unauthenticated \
   --concurrency 50 \
   --cpu 2 \
-  --image gcr.io/${PROJECT_ID}/vault:1.7.1 \
+  --image gcr.io/${PROJECT_ID}/vault:1.16.0-rc3 \
   --memory '2G' \
   --min-instances 1 \
   --max-instances 1 \
@@ -17,4 +17,4 @@ gcloud alpha run deploy vault-server \
   --set-env-vars="GOOGLE_PROJECT=${PROJECT_ID},GOOGLE_STORAGE_BUCKET=${PROJECT_ID}-data" \
   --set-secrets="/etc/vault/config.hcl=vault-server-config:1" \
   --timeout 300 \
-  --region us-west1
+  --region asia-southeast1

@@ -148,7 +148,7 @@ gcloud beta run deploy vault-server \
   --no-allow-unauthenticated \
   --concurrency 50 \
   --cpu 2 \
-  --image gcr.io/hightowerlabs/vault:1.7.1 \
+  --image gcr.io/hightowerlabs/vault:1.16.0-rc3 \
   --no-cpu-throttling \
   --memory '2G' \
   --min-instances 1 \
@@ -200,7 +200,7 @@ curl -s -X GET \
   "n": 0,
   "progress": 0,
   "nonce": "",
-  "version": "1.7.1",
+  "version": "1.16.0-rc3",
   "migration": false,
   "recovery_seal": true,
   "storage_type": "gcs"
@@ -262,7 +262,7 @@ gcloud beta run deploy vault-server \
   --allow-unauthenticated \
   --concurrency 50 \
   --cpu 2 \
-  --image gcr.io/hightowerlabs/vault:1.7.1 \
+  --image gcr.io/hightowerlabs/vault:1.16.0-rc3 \
   --no-cpu-throttling \
   --memory '2G' \
   --min-instances 1 \
@@ -296,7 +296,7 @@ vault version
 ```
 
 ```
-Vault v1.7.1 (917142287996a005cb1ed9d96d00d06a0590e44e)
+Vault v1.16.0-rc3 (917142287996a005cb1ed9d96d00d06a0590e44e)
 ```
 
 Configure the vault CLI to use the `vault-server` Cloud Run service URL by setting the `VAULT_ADDR` environment variable:
@@ -322,7 +322,7 @@ Initialized              true
 Sealed                   false
 Total Recovery Shares    1
 Threshold                1
-Version                  1.7.1
+Version                  1.16.0-rc3
 Storage Type             gcs
 Cluster Name             vault-cluster-XXXXXXXX
 Cluster ID               XXXXXXXX-XXXX-XXXX-XXXX-XXXXXXXXXXXX
