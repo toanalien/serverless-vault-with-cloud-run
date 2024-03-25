@@ -136,7 +136,12 @@ gcloud kms keys add-iam-policy-binding seal \
   --keyring "vault-server" \
   --location "global" \
   --member serviceAccount:${SERVICE_ACCOUNT_EMAIL} \
-  --role roles/cloudkms.cryptoKeyEncrypterDecrypter \
+  --role roles/cloudkms.cryptoKeyEncrypterDecrypter
+
+gcloud kms keys add-iam-policy-binding seal \
+  --keyring "vault-server" \
+  --location "global" \
+  --member serviceAccount:${SERVICE_ACCOUNT_EMAIL} \
   --role roles/cloudkms.viewer
 ```
 
